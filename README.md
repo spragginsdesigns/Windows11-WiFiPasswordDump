@@ -1,3 +1,40 @@
+# WiFi Password Extraction Toolkit for USB Rubber Ducky
+
+This toolkit includes two components designed to extract saved WiFi passwords on a Windows system and save them to a file for review. The first component is a PowerShell script named `dumpwifipass.ps1`, which extracts the passwords. The second is a Ducky Script named `dumpwifipasswords.txt`, which automates the execution of the PowerShell script on a Windows 11 machine.
+
+## Components
+
+- **dumpwifipass.ps1**: A PowerShell script that extracts WiFi SSIDs and their corresponding passwords, saving them to a text file on the Desktop.
+- **dumpwifipasswords.txt**: A Ducky Script designed to automate the execution of `dumpwifipass.ps1` on a target Windows 11 machine.
+
+## Prerequisites
+
+- A Windows 11 machine with saved WiFi profiles.
+- Administrative privileges on the target machine.
+- A USB Rubber Ducky or similar device capable of emulating keyboard input.
+- (Optional) Twin Duck firmware on the USB Rubber Ducky if you plan to store and execute the PowerShell script directly from the device.
+
+## Setup
+
+1. **Prepare the PowerShell Script**:
+    - Ensure `dumpwifipass.ps1` is ready and stored either on a USB drive (if using Twin Duck firmware) or in a location from which it can be executed on the target machine.
+
+2. **Load the Ducky Script**:
+    - Encode `dumpwifipasswords.txt` using the Ducky Script Encoder and load it onto the USB Rubber Ducky.
+
+## Usage
+
+### Running the PowerShell Script Manually
+
+1. Open PowerShell with administrative privileges.
+2. Navigate to the directory containing `dumpwifipass.ps1`.
+3. Execute the script by typing `.\dumpwifipass.ps1` and pressing Enter.
+
+### Automating with the Ducky Script
+
+1. Insert the USB Rubber Ducky into the target Windows 11 machine.
+2. The Ducky Script `dumpwifipasswords.txt` will execute, automating the steps to open PowerShell, run `dumpwifipass.ps1`, and output the WiFi passwords to a file on the Desktop.
+
 # WiFi Password Extractor
 
 This PowerShell script, `GetWifiPasswords.ps1`, automates the process of retrieving saved WiFi network names (SSIDs) and their corresponding passwords from a Windows system and saves them into a text file named `WiFiPasswords.txt` on the user's Desktop.
@@ -41,19 +78,19 @@ No installation is required. Simply download `GetWifiPasswords.ps1` to your pref
 ## Output
 
 - The script generates a file named `WiFiPasswords.txt` on your Desktop, containing the SSIDs and passwords.
-- Each line in the output file follows the format: `Profile: <SSID>, Password: <Password>`. Profiles without retrievable passwords will be noted accordingly.
+- Each line in the output file follows the format: `Profile: <SSID>, Password: <Password>`. Profiles without retrievable passwords will be taken care of accordingly.
 
 ## Security Notice
 
-This script is intended for legal and authorized use only. Always ensure you have explicit permission to access and modify system configurations or data.
+This script and the entire toolkit are intended for legal and authorized use only. Always ensure you have explicit permission to access and modify system configurations or data.
 
 ## Contributing
 
-Feedback and contributions to the script are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
+Feedback and contributions to the script are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
 
 ## License
 
-This script is provided "as is", without warranty of any kind. You are free to use and modify it for personal or educational purposes.
+This script is provided "as is" without warranty. You are free to use and modify it for personal or educational purposes.
 
 ---
 
